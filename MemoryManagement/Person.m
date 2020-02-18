@@ -35,9 +35,13 @@
 
 - (void)setCar:(Car *)car
 {
+    _car.owner = nil;
+    
     [car retain];
     [_car release];
     _car = car;
+    
+    _car.owner = self;
     
 //    if (_car != car) {
 //        [_car release];

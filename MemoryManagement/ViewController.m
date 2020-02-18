@@ -52,6 +52,9 @@
     
     john.car = honda; // honda 1
     [john release]; // john 0, honda 0
+    
+//    NSLog(@"Final Person: %@", john);
+//    NSLog(@"Final Car: %@", honda);
 }
 
 - (void)dealloc

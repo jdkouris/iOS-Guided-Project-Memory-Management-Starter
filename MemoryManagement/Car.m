@@ -8,6 +8,7 @@
 
 #import "Car.h"
 #import "LSILog.h"
+#import "Person.h"
 
 @implementation Car
 
@@ -34,6 +35,9 @@
 //    self.make = nil;
     [_make release];
     _make = nil;
+    
+//    [_owner release];
+    _owner = nil;
     
     [super dealloc];
 }
