@@ -45,9 +45,10 @@
     self.myName = [[[NSMutableString alloc] initWithString:@"John Kouris"] autorelease];
     
     Person *john = [[Person alloc] init]; // 1
-    Car *honda = [[Car alloc] initWithMake:@"Civic Si"]; // 1
+//    Car *honda = [[Car alloc] initWithMake:@"Civic Si"]; // 1
+    Car *honda = [Car carWithMake:@"Civic Si"]; // 1
     john.car = honda; // honda 2
-    [honda release]; // honda 1
+//    [honda release]; // honda 1
     
     john.car = honda; // honda 1
     [john release]; // john 0, honda 0
