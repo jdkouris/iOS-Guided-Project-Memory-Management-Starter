@@ -27,13 +27,18 @@
 - (void)dealloc
 {
     NSLog(@"-[Car dealloc]: %@", self);
-    // TODO: Implement dealloc with MRC
+    
+//    self.make = nil;
+    [_make release];
+    _make = nil;
+    
+    [super dealloc];
 }
 
 - (NSString *)description
 {
     // TODO: Implement a standard autoreleasing method.
-    NSString *description = [[NSString alloc] initWithFormat:@"Car: %@", self.make];
+    NSString *description = [[NSString alloc] initWithFormat:@"Car.make: %@", self.make];
     return description;
 }
 
